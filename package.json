@@ -1,0 +1,19 @@
+{
+  "name": "reader",
+  "version": "1.0.0",
+  "description": "Reader app hosted on node",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "amusriv",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.4.5",
+    "ejs": "^2.3.3",
+    "express": "^4.13.3",
+	"monk": "^0.7.1",
+	"mongoose": "*",
+	"mongodb": "*"
+  }
+}

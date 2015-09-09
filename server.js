@@ -34,7 +34,10 @@ var watchModel = db.model('watchModel', watchSchema);
 //app.set("views", __dirname+"/views/");
 app.use(express.static(__dirname + "/views/"));
 app.get("/", function(req, res) {
-    res.sendfile("./views/Read.html");
+    res.sendfile("./views/Read2.html");
+});
+app.get("/styles/main.css", function(req, res) {
+    res.sendfile("./views/styles/main.css");
 });
 app.get("/read", function(req, res) {
     var totalLinks = 50; //50 -> safe value

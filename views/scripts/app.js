@@ -1,23 +1,19 @@
-'use strict';
+var app = angular.module('Read2',[]);
 
-angular
-    .module('readerApp', [
-        'ngAnimate',
-        'ngCookies',
-        'ngResource',
-        'ngRoute',
-        'ngSanitize',
-        'ngTouch'
-    ])
-    .config(function ($routeProvider) {
-        $routeProvider
-            .when('/', {
-                templateUrl: 'views/Read.html',
-                controller: 'ReadCtrl',
-                controllerAs: 'main'
-            })
-            .otherwise({
-                redirectTo: '/'
-            });
-    });
+app.controller('readCtrl', function($scope) {
+    $scope.link="/read";
+    app.go() = function() {
+        $http({
+            url: $scope.link,
+            method: "GET",
+            params: {offset: $scope.offset, count: $scope.count},
+        }).success(funtion(response) {$scope.target = response
+});
 
+app.controller('watchCtrl', function($scope) {
+    $scope.link="/watch";
+})
+
+app.controller('listenCtrl', function($scope) {
+    $scope.link="/listen";
+})

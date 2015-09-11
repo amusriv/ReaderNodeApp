@@ -4,26 +4,27 @@
       Read Watch Listen
     </title>
     <link rel="stylesheet" type="text/css" href="styles/main.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="views/scripts/app.js"></script>
   </head>
-  <body>
+  <body ng-app="Read2">
     <nav>
     </nav>
-
     <div id="main">
       <div id="container">
-        <div class="portal left">
+        <div class="portal left" ng-controller="readCtrl">
           <div class="text">
-            <p>Read</p>
+            <h1> <a href="/Read" class="caption"> Read</a></h1>
           </div>
         </div>
-        <div class="portal center">
+        <div class="portal center" ng-controller="watchCtrl">
           <div class="text">
-            <p>Watch</p>
+            <h1><a href="#" class="caption">Watch</a></h1>
           </div>
         </div>
-        <div class="portal right">
+        <div class="portal right" ng-controller="listenCtrl">
           <div class="text">
-            <p>Listen</p>
+            <h1><a href="#" class="caption">Listen</a></h1>
           </div>
         </div>
       </div>

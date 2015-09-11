@@ -1,4 +1,5 @@
 /*	This is boss server. The code defines routes (relative url routes) and how requests to those 
+:/app
 	routes are handled. I'm using mongoose for db access (native mongoclient is such a pain!). The 
 	UI simply needs to make get calls to /read /listen /watch and expect a string (url to go to)in return 
 	:)
@@ -35,6 +36,9 @@ var watchModel = db.model('watchModel', watchSchema);
 app.use(express.static(__dirname + "/views/"));
 app.get("/", function(req, res) {
     res.sendfile("./views/Read2.html");
+});
+app.get("/views/scripts/app.js", function(req, res) {
+    res.sendfile("./views/scripts/app.js");
 });
 app.get("/styles/main.css", function(req, res) {
     res.sendfile("./views/styles/main.css");

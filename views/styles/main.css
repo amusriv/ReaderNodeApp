@@ -76,4 +76,5 @@ footer {
 
 .caption:hover{
     color: orange;
+    cursor: pointer;
 }

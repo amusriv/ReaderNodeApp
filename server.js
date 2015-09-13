@@ -35,7 +35,7 @@ var watchModel = db.model('watchModel', watchSchema);
 //app.set("views", __dirname+"/views/");
 app.use(express.static(__dirname + "/views/"));
 app.get("/", function(req, res) {
-    res.sendfile("./views/Read2.html");
+    res.sendfile("./views/Read.html");
 });
 app.get("/views/scripts/app.js", function(req, res) {
     res.sendfile("./views/scripts/app.js");
@@ -66,7 +66,7 @@ app.get("/read", function(req, res) {
             console.log(data[0]);
             var dbresultJSON = data[0];
             console.log("the link is: " + dbresultJSON.link);
-            res.send(dbresultJSON.link);
+            res.send( dbresultJSON.link);
         }
     });
 });

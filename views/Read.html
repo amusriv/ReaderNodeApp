@@ -1,25 +1,37 @@
 <html>
-<head>
-<title>I want to read a story!</title>
-<link href="story.css" rel="stylesheet" type="text/css">
-<link href='http://fonts.googleapis.com/css?family=Bitte' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="Read.js"></script>	
+  <head>
+    <title>
+      Read Watch Listen
+    </title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css"/>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-cookies.min.js"></script>
+    <script src="views/scripts/app.js"></script>
+  </head>
+  <body ng-app="Read">
+    <nav>
+    </nav>
+    <div id="main">
+      <div id="container">
+        <div class="portal left" ng-controller="readCtrl">
+          <div class="text">
+            <h1 class="caption" ng-click="onClick()" ng-init="initCookie()"> Read</h1>
+          </div>
+        </div>
+        <div class="portal center" ng-controller="watchCtrl">
+          <div class="text">
+            <h1 class="caption">Watch</h1>
+          </div>
+        </div>
+        <div class="portal right" ng-controller="listenCtrl">
+          <div class="text">
+            <h1 class="caption">Listen</h1>
+          </div>
+        </div>
+      </div>
+    </div>
 
-</head>
-
-
-			<a href="#" id="readButton" target="_blank"><span>I want to read a story!</span></a>
-
-<script type="text/javascript">
-document.getElementById("readButton").addEventListener("click",f1,false);
-</script> 
-
-<body id="bd">
-
-			
-			
-			
-			
-</body>
+    <footer>
+    </footer>
+  </body>
 </html>
